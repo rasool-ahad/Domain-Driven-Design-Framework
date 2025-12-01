@@ -1,4 +1,4 @@
-﻿namespace DDD.Core.Domain.Abstractions;
+﻿namespace DDD.Core.Domain.Abstractions.Audits;
 
 public interface IDeletionAudited<TUserKey, TUser> where TUserKey : struct
 {

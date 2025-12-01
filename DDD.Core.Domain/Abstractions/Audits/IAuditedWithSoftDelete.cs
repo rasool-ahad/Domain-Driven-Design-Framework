@@ -1,6 +1,6 @@
-﻿namespace DDD.Core.Domain.Abstractions;
+﻿namespace DDD.Core.Domain.Abstractions.Audits;
 
-internal interface IAuditedWithSoftDelete<TUserKey, TUser> :
+public interface IAuditedWithSoftDelete<TUserKey, TUser> :
     ICreationAudited<TUserKey, TUser>,
     IModificationAudited<TUserKey, TUser>,
     IDeletionAudited<TUserKey, TUser>,

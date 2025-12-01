@@ -1,6 +1,6 @@
-﻿namespace DDD.Core.Domain.Abstractions;
+﻿namespace DDD.Core.Domain.Abstractions.Audits;
 
-internal interface IAudited<TUserKey, TUser> : 
+public interface IAudited<TUserKey, TUser> : 
     ICreationAudited<TUserKey, TUser>, 
     IModificationAudited<TUserKey, TUser>
     where TUserKey : struct
