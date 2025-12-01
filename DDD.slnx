@@ -1,8 +1,10 @@
 <Solution>
   <Folder Name="/Src/" />
   <Folder Name="/Src/Core/">
-    <Project Path="DDD.Core.Contracts/DDD.Core.Contracts.csproj" Id="ae62c523-2b45-49a7-94b0-873180cac118" />
     <Project Path="Src/Core/DDD.Core.ApplicationServices/DDD.Core.ApplicationServices/DDD.Core.ApplicationServices.csproj" Id="e79ca995-d774-4c50-bb26-4b8852b64c42" />
+    <Project Path="Src/Core/DDD.Core.Contracts/DDD.Core.Contracts.csproj" />
     <Project Path="Src/Core/DDD.Core.Domain/DDD.Core.Domain.csproj" />
   </Folder>
+  <Folder Name="/Src/Infra/" />
+  <Folder Name="/Src/Infra/Data/" />
 </Solution>
