@@ -10,4 +10,13 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\DDD.Core.ApplicationServices\DDD.Core.ApplicationServices\DDD.Core.ApplicationServices.csproj" />
+    <ProjectReference Include="..\..\Core\DDD.Core.Contracts\DDD.Core.Contracts.csproj" />
+    <ProjectReference Include="..\..\Core\DDD.Core.Domain\DDD.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\Infra\DDD.Infra.Data.Sql.EntityFramework.Command\DDD.Infra.Data.Sql.EntityFramework.Commands.csproj" />
+    <ProjectReference Include="..\..\Infra\DDD.Infra.Data.Sql.EntityFramework\DDD.Infra.Data.Sql.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\Infra\DDD.Infra.Sql.EntityFramework.Queries\DDD.Infra.Sql.EntityFramework.Queries.csproj" />
+  </ItemGroup>
+
 </Project>
