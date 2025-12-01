@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Security.Principal;
 
-namespace DDD.Core.Domain.Abstractions.Entities
+namespace DDD.Core.Domain.Abstractions.Entities;
+
+public interface IEntity<TPrimaryKey> where TPrimaryKey : struct
 {
-    internal interface IEntity
-    {
-    }
+    TPrimaryKey Id { get; }
 }
