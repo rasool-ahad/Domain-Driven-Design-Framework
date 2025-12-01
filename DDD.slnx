@@ -6,5 +6,8 @@
     <Project Path="Src/Core/DDD.Core.Domain/DDD.Core.Domain.csproj" />
   </Folder>
   <Folder Name="/Src/Infra/" />
-  <Folder Name="/Src/Infra/Data/" />
+  <Folder Name="/Src/Infra/Data/">
+    <Project Path="DDD.Infra.Data.Sql.EntityFramework.Command/DDD.Infra.Data.Sql.EntityFramework.Commands.csproj" Id="ed23db74-3e3b-4efd-a2a7-688016a32763" />
+    <Project Path="Src/Infra/DDD.Infra.Sql.EntityFramework.Queries/DDD.Infra.Sql.EntityFramework.Queries.csproj" Id="5f820b8d-4e82-436b-9041-c5895bdd137a" />
+  </Folder>
 </Solution>
