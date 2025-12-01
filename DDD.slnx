@@ -1,1 +1,7 @@
-<Solution />
+<Solution>
+  <Folder Name="/Src/" />
+  <Folder Name="/Src/Core/">
+    <Project Path="Src/Core/DDD.Core.ApplicationServices/DDD.Core.ApplicationServices/DDD.Core.ApplicationServices.csproj" Id="e79ca995-d774-4c50-bb26-4b8852b64c42" />
+    <Project Path="Src/Core/DDD.Core.Domain/DDD.Core.Domain.csproj" />
+  </Folder>
+</Solution>
