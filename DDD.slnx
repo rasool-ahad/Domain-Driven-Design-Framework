@@ -3,6 +3,7 @@
   <Folder Name="/src/Core/">
     <Project Path="src/Core/DDD.Core.ApplicationServices/DDD.Core.ApplicationServices.csproj" />
     <Project Path="src/Core/DDD.Core.Contracts/DDD.Core.Contracts.csproj" />
+    <Project Path="src/Core/DDD.Core.Domain.ToolKits/DDD.Core.Domain.ToolKits.csproj" Id="6681d5bf-ff5c-43a0-b394-d9c45acbb433" />
     <Project Path="src/Core/DDD.Core.Domain/DDD.Core.Domain.csproj" />
   </Folder>
   <Folder Name="/src/Endpoints/">
