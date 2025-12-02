@@ -1,17 +1,17 @@
 <Solution>
-  <Folder Name="/Src/" />
-  <Folder Name="/Src/Core/">
-    <Project Path="Src/Core/DDD.Core.ApplicationServices/DDD.Core.ApplicationServices/DDD.Core.ApplicationServices.csproj" Id="e79ca995-d774-4c50-bb26-4b8852b64c42" />
-    <Project Path="Src/Core/DDD.Core.Contracts/DDD.Core.Contracts.csproj" />
-    <Project Path="Src/Core/DDD.Core.Domain/DDD.Core.Domain.csproj" />
+  <Folder Name="/src/" />
+  <Folder Name="/src/Core/">
+    <Project Path="src/Core/DDD.Core.ApplicationServices/DDD.Core.ApplicationServices.csproj" />
+    <Project Path="src/Core/DDD.Core.Contracts/DDD.Core.Contracts.csproj" />
+    <Project Path="src/Core/DDD.Core.Domain/DDD.Core.Domain.csproj" />
   </Folder>
-  <Folder Name="/Src/EndPoints/">
-    <Project Path="Src/EndPoints/DDD.Endpoints.WebApi/DDD.Endpoints.WebApi.csproj" Id="ca66281b-aea2-4ecc-8fcb-02938f94a512" />
+  <Folder Name="/src/Endpoints/">
+    <Project Path="src/EndPoints/DDD.Endpoints.WebApi/DDD.Endpoints.WebApi.csproj" />
   </Folder>
-  <Folder Name="/Src/Infra/" />
-  <Folder Name="/Src/Infra/Data/">
-    <Project Path="Src/Infra/DDD.Infra.Data.Sql.EntityFramework.Command/DDD.Infra.Data.Sql.EntityFramework.Commands.csproj" />
-    <Project Path="Src/Infra/DDD.Infra.Data.Sql.EntityFramework/DDD.Infra.Data.Sql.EntityFramework.csproj" Id="754583ea-b7f3-44db-94d7-9cb37cdf05e4" />
-    <Project Path="Src/Infra/DDD.Infra.Sql.EntityFramework.Queries/DDD.Infra.Sql.EntityFramework.Queries.csproj" Id="5f820b8d-4e82-436b-9041-c5895bdd137a" />
+  <Folder Name="/src/Infra/" />
+  <Folder Name="/src/Infra/Data/">
+    <Project Path="src/Infra/Data/DDD.Infra.Data.Sql.EntityFramework.Command/DDD.Infra.Data.Sql.EntityFramework.Commands.csproj" />
+    <Project Path="src/Infra/Data/DDD.Infra.Data.Sql.EntityFramework/DDD.Infra.Data.Sql.EntityFramework.csproj" />
+    <Project Path="src/Infra/Data/DDD.Infra.Sql.EntityFramework.Queries/DDD.Infra.Sql.EntityFramework.Queries.csproj" />
   </Folder>
 </Solution>

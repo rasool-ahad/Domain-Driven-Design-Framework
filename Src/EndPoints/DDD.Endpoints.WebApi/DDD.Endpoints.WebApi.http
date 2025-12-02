@@ -1,4 +1,4 @@
-@DDD.Endpoints.WebApi_HostAddress = http://localhost:5148
+@DDD.Endpoints.WebApi_HostAddress = http://localhost:5219
 
 GET {{DDD.Endpoints.WebApi_HostAddress}}/weatherforecast/
 Accept: application/json
