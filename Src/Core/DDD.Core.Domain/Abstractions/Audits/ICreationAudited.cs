@@ -2,9 +2,9 @@
 
 public interface ICreationAudited<TUserKey, TUser> where TUserKey : struct
 {
-    TUserKey CreatorUserId { get; protected set; }
+    TUserKey CreatorUserId { get; }
 
-    TUser CreatorUser { get; protected set; }
+    TUser CreatorUser { get; }
 
-    DateTimeOffset CreatedOnUtc { get; protected set; }
+    DateTimeOffset CreatedOnUtc { get; }
 }
