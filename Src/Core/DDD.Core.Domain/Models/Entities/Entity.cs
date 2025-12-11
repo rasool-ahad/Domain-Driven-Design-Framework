@@ -14,7 +14,6 @@ public abstract class Entity<TPrimaryKey> : IEntity<TPrimaryKey>, IEquatable<Ent
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-
     public TPrimaryKey Id { get; protected set; }
 
     protected Entity()
