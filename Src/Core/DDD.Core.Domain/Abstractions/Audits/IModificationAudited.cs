@@ -2,9 +2,9 @@
 
 public interface IModificationAudited<TUserKey, TUser> where TUserKey : struct
 {
-    TUserKey? LastModifierUserId { get; protected set; }
+    TUserKey? LastModifierUserId { get; }
 
-    TUser LastModifierUser { get; protected set; }
+    TUser LastModifierUser { get; }
 
-    DateTimeOffset? UpdatedOnUtc { get; protected set; }
+    DateTimeOffset? UpdatedOnUtc { get; }
 }

@@ -3,9 +3,9 @@ using DDD.Core.Domain.Models.Entities;
 
 namespace DDD.Core.Domain.ToolKits.Entities;
 
-public abstract class CreationAuditedEntity<TPrimaryKey, TUser, TUserKey> :
+public abstract class AuditedEntity<TPrimaryKey, TUser, TUserKey> :
     Entity<TPrimaryKey>,
-    ICreationAudited<TUserKey, TUser>
+    IAudited<TUserKey, TUser>
     where TPrimaryKey : struct,
         IComparable,
         IComparable<TPrimaryKey>,
@@ -20,4 +20,10 @@ public abstract class CreationAuditedEntity<TPrimaryKey, TUser, TUserKey> :
     public TUser CreatorUser { get; protected set; }
 
     public DateTimeOffset CreatedOnUtc { get; protected set; }
+
+    public TUserKey? LastModifierUserId { get; protected set; }
+
+    public TUser LastModifierUser { get; protected set; }
+
+    public DateTimeOffset? UpdatedOnUtc { get; protected set; }
 }

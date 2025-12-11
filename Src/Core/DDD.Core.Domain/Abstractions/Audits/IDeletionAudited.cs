@@ -2,9 +2,9 @@
 
 public interface IDeletionAudited<TUserKey, TUser> where TUserKey : struct
 {
-    TUserKey? DeleterUserId { get; protected set; }
+    TUserKey? DeleterUserId { get; }
 
-    DateTimeOffset? DeletedOnUtc { get; set; }
+    DateTimeOffset? DeletedOnUtc { get; }
 
-    TUser DeleterUser { get; set; }
+    TUser DeleterUser { get; }
 }

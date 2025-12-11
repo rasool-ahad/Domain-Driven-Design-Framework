@@ -2,5 +2,5 @@
 
 public interface ISoftDelete
 {
-    bool IsDeleted { get; protected set; }
+    bool IsDeleted { get; }
 }

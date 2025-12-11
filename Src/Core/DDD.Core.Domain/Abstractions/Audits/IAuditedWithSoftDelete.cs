@@ -6,6 +6,7 @@ public interface IAuditedWithSoftDelete<TUserKey, TUser> :
     IDeletionAudited<TUserKey, TUser>,
     ISoftDelete
     where TUserKey : struct
+    where TUser : class
 {
 
 }
