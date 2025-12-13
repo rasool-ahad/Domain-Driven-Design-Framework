@@ -1,16 +1,54 @@
 ﻿namespace DDD.Core.Contracts.ApplicationServices.Commons;
 
-public abstract class ApplicationServiceResult : IApplicationServiceResult
+public record ApplicationServiceResult : IApplicationServiceResult
 {
-    protected readonly List<string> _messages = new();
+    public bool IsSuccess { get; }
 
-    public IEnumerable<string> Messages => _messages;
+    public bool IsFailure => !IsSuccess;
 
-    public ApplicationServiceStatus Status { get; set; }
+    public ApplicationServiceErrorResult? Error { get; }
 
-    public void AddMessage(string error) => _messages.Add(error);
+    protected ApplicationServiceResult(bool isSuccess, ApplicationServiceErrorResult? error)
+    {
+        if (isSuccess && error is not null)
+            throw new InvalidOperationException();
 
-    public void AddMessages(IEnumerable<string> errors) => _messages.AddRange(errors);
+        if (!isSuccess && error is null)
+            throw new InvalidOperationException();
 
-    public void ClearMessages() => _messages.Clear();
+        IsSuccess = isSuccess;
+        Error = error;
+    }
+}
+
+public record ApplicationServiceResult<T> : ApplicationServiceResult
+{
+    private readonly T? _value;
+
+    public T Value =>
+        IsSuccess
+            ? _value!
+            : throw new InvalidOperationException("No value for failure result.");
+
+    protected ApplicationServiceResult(T value)
+        : base(true, null)
+    {
+        _value = value;
+    }
+
+    protected ApplicationServiceResult(ApplicationServiceErrorResult error)
+        : base(false, error)
+    {
+        _value = default;
+    }
+
+    public static ApplicationServiceResult<T> Success(T value) => new(value);
+
+    public static ApplicationServiceResult<T> Failure(ApplicationServiceErrorResult error) => new(error);
+
+    public static implicit operator ApplicationServiceResult<T>(T value)
+        => Success(value);
+
+    public static implicit operator ApplicationServiceResult<T>(ApplicationServiceErrorResult error)
+        => Failure(error);
 }
