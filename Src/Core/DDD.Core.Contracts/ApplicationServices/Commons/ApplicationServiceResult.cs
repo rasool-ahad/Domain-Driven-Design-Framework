@@ -23,23 +23,23 @@ public record ApplicationServiceResult : IApplicationServiceResult
 
 public record ApplicationServiceResult<T> : ApplicationServiceResult
 {
-    private readonly T? _value;
+    private readonly T? _data;
 
-    public T Value =>
+    public T Data =>
         IsSuccess
-            ? _value!
-            : throw new InvalidOperationException("No value for failure result.");
+            ? _data!
+            : throw new InvalidOperationException("No data for failure result.");
 
     protected ApplicationServiceResult(T value)
         : base(true, null)
     {
-        _value = value;
+        _data = value;
     }
 
     protected ApplicationServiceResult(ApplicationServiceErrorResult error)
         : base(false, error)
     {
-        _value = default;
+        _data = default;
     }
 
     public static ApplicationServiceResult<T> Success(T value) => new(value);
