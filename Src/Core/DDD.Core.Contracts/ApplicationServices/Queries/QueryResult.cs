@@ -2,7 +2,7 @@
 
 namespace DDD.Core.Contracts.ApplicationServices.Queries;
 
-public sealed record QueryResult<TData> : ApplicationServiceResult<TData>
+public record QueryResult<TData> : ApplicationServiceResult<TData>
 {
     private QueryResult(TData data) : base(data) { }
 
