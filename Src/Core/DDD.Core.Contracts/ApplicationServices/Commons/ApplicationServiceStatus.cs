@@ -1,16 +1,16 @@
 ﻿namespace DDD.Core.Contracts.ApplicationServices.Commons;
 
-public enum ApplicationServiceErrorType
+public enum ApplicationServiceStatus
 {
-    NotFound = 1,
+    Ok = 1,
 
-    Conflict = 2,
+    NotFound = 2,
 
     ValidationError = 3,
 
     InvalidDomainState = 4,
 
-    UnSupported = 5,
+    Forbiden = 5,
 
-    Exception = 6,
+    Exception = 100,
 }

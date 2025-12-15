@@ -2,7 +2,7 @@
 
 public interface IApplicationServiceResult
 {
-    public bool IsSuccess { get; }
+    IEnumerable<string> Messages { get; }
 
-    public ApplicationServiceErrorResult? Error { get; }
+    ApplicationServiceStatus Status { get; set; }
 }

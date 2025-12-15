@@ -1,25 +1,15 @@
 ﻿using DDD.Core.Contracts.ApplicationServices.Commons;
-using DDD.Core.Contracts.ApplicationServices.Queries;
 
 namespace DDD.Core.Contracts.ApplicationServices.Commands;
 
-public record CommandResult : ApplicationServiceResult
+public class CommandResult : ApplicationServiceResult
 {
-    protected CommandResult(bool isSuccess, ApplicationServiceErrorResult? error) : base(isSuccess, error)
-    {
-    }
+
 }
 
-public record CommandResult<TData> : ApplicationServiceResult<TData>
+public class CommandResult<TData> : CommandResult
 {
-    private CommandResult(TData data) : base(data) { }
+    public TData? _data;
 
-    private CommandResult(ApplicationServiceErrorResult error)
-    : base(error)
-    {
-    }
-
-    public static implicit operator CommandResult<TData>(TData data) => new(data);
-
-    public static implicit operator CommandResult<TData>(ApplicationServiceErrorResult error) => new(error);
+    public TData? Data => _data;
 }

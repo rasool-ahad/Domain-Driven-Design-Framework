@@ -2,16 +2,14 @@
 
 namespace DDD.Core.Contracts.ApplicationServices.Queries;
 
-public record QueryResult<TData> : ApplicationServiceResult<TData>
+public sealed class QueryResult<TData> : ApplicationServiceResult
 {
-    private QueryResult(TData data) : base(data) { }
-
-    private QueryResult(ApplicationServiceErrorResult error)
-    : base(error)
+    public TData? _data;
+    public TData? Data
     {
+        get
+        {
+            return _data;
+        }
     }
-
-    public static implicit operator QueryResult<TData>(TData data) => new(data);
-
-    public static implicit operator QueryResult<TData>(ApplicationServiceErrorResult error) => new(error);
 }
