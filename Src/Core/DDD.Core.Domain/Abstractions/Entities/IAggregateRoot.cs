@@ -8,6 +8,8 @@ public interface IAggregateRoot
 
     void AddDomainEvent(IDomainEvent newEvent);
 
+    public IEnumerable<IDomainEvent> GetEvents();
+
     void ClearEvents();
 
     void RemoveDomainEvent(IDomainEvent eventItem);

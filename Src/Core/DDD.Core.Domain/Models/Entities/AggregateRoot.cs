@@ -19,6 +19,7 @@ public abstract class AggregateRoot<TPrimaryKey> : Entity<TPrimaryKey>, IAggrega
     {
         _domainEvents = new List<IDomainEvent>();
     }
+    public IEnumerable<IDomainEvent> GetEvents() => _domainEvents.AsEnumerable();
 
     public virtual void AddDomainEvent(IDomainEvent newEvent)
     {
@@ -40,4 +41,9 @@ public abstract class AggregateRoot<TPrimaryKey> : Entity<TPrimaryKey>, IAggrega
     {
         _domainEvents.Clear();
     }
+}
+
+public abstract class AggregateRoot : AggregateRoot<long>
+{
+
 }
