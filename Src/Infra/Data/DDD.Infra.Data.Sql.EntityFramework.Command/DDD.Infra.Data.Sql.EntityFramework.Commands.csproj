@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\DDD.Core.Contracts\DDD.Core.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\Core\DDD.Core.Domain.ToolKits\DDD.Core.Domain.ToolKits.csproj" />
     <ProjectReference Include="..\..\..\Core\DDD.Core.Domain\DDD.Core.Domain.csproj" />
     <ProjectReference Include="..\DDD.Infra.Data.Sql.EntityFramework\DDD.Infra.Data.Sql.EntityFramework.csproj" />
   </ItemGroup>
