@@ -21,6 +21,7 @@
     <ProjectReference Include="..\..\Infra\Data\DDD.Infra.Data.Sql.EntityFramework.Command\DDD.Infra.Data.Sql.EntityFramework.Commands.csproj" />
     <ProjectReference Include="..\..\Infra\Data\DDD.Infra.Data.Sql.EntityFramework\DDD.Infra.Data.Sql.EntityFramework.csproj" />
     <ProjectReference Include="..\..\Infra\Data\DDD.Infra.Sql.EntityFramework.Queries\DDD.Infra.Sql.EntityFramework.Queries.csproj" />
+    <ProjectReference Include="..\..\Utilities\Extensions\Extensions.DependencyInjection.Abstractions\Extensions.Dependencyinjection.Abstractions\Extensions.Dependencyinjection.Abstractions.csproj" />
   </ItemGroup>
 
   <ItemGroup>
