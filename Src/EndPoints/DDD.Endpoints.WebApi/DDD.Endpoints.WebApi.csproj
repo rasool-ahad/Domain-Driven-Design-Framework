@@ -7,6 +7,7 @@
   </PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="FluentValidation" Version="12.1.1" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="9.0.0" />
 		<PackageReference Include="Scrutor" Version="5.0.2" />
@@ -20,6 +21,7 @@
     <ProjectReference Include="..\..\Infra\Data\DDD.Infra.Data.Sql.EntityFramework\DDD.Infra.Data.Sql.EntityFramework.csproj" />
     <ProjectReference Include="..\..\Infra\Data\DDD.Infra.Sql.EntityFramework.Queries\DDD.Infra.Sql.EntityFramework.Queries.csproj" />
     <ProjectReference Include="..\..\Utilities\Extensions\Extensions.DependencyInjection.Abstractions\Extensions.Dependencyinjection.Abstractions\Extensions.Dependencyinjection.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Utilities\Extensions\Extensions.Serializers.Abstractions\Extensions.Serializers.Abstractions.csproj" />
   </ItemGroup>
 
   <ItemGroup>

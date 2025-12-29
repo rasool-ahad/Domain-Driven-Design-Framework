@@ -18,5 +18,6 @@
   <Folder Name="/src/Utilities/" />
   <Folder Name="/src/Utilities/Extensions/">
     <Project Path="src/Utilities/Extensions/Extensions.DependencyInjection.Abstractions/Extensions.Dependencyinjection.Abstractions/Extensions.Dependencyinjection.Abstractions.csproj" Id="c2ef4def-71d2-4668-a10f-e554f9ef77d9" />
+    <Project Path="src/Utilities/Extensions/Extensions.Serializers.Abstractions/Extensions.Serializers.Abstractions.csproj" Id="e8dfe6ba-c067-48fb-9ab8-c2902d823a12" />
   </Folder>
 </Solution>
